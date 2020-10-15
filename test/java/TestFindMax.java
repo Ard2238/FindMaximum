@@ -21,4 +21,11 @@ public class TestFindMax {
         Assert.assertEquals(11.85, findMax.findMaxFloat(5.96f,11.85f,7.31f), 2);
         Assert.assertEquals(11.85,findMax.findMaxFloat(5.96f,7.31f,11.85f), 2);
     }
+
+    @Test
+    public void testFindMaxString(){
+        Assert.assertEquals("Peach", findMax.findMaxString("Peach", "Apple", "Banana"));
+        Assert.assertEquals("Peach", findMax.findMaxString("Apple", "Peach", "Banana"));
+        Assert.assertEquals("Peach", findMax.findMaxString("Apple", "Banana", "Peach"));
+    }
 }
