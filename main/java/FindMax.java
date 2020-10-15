@@ -11,22 +11,6 @@ public class FindMax {
         else return e3;
     }
 
-//    public float findMaxFloat(Float num4, Float num5, Float num6){
-//        if(num4.compareTo(num5) > 0  && num4.compareTo(num6) > 0)
-//            return num4;
-//        else if(num5.compareTo(num6) > 0)
-//            return num5;
-//        else return num6;
-//    }
-
-//    public String findMaxString(String str1, String str2, String str3){
-//        if(str1.compareTo(str2) > 0  && str1.compareTo(str2) > 0)
-//            return str1;
-//        else if(str2.compareTo(str3) > 0)
-//            return str2;
-//        else return str3;
-//    }
-
     public static void main(String[] args) {
         System.out.println("Welcome to the Find Maximum Program");
         FindMax findMax = new FindMax();
