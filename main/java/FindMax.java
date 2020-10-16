@@ -23,8 +23,13 @@ public class FindMax <E extends Comparable> {
             return null;
         }else {
             Collections.sort(Arrays.asList(e1));
+            printMax(e1[e1.length-1]);
             return e1[e1.length -1];
         }
+    }
+
+    public static <E> void printMax(E element){
+        System.out.println("Maximum value : " + element);
     }
 
     public static void main(String[] args) {
@@ -36,20 +41,20 @@ public class FindMax <E extends Comparable> {
         Integer num2 = sc.nextInt();
         Integer num3 = sc.nextInt();
         findMax = new FindMax(num1, num2, num3);
-        System.out.println("Max Integer : " + findMax.testMaximum());
+        findMax.testMaximum();
 
         System.out.println("Enter the three numbers : ");
         Float num4 = sc.nextFloat();
         Float num5 = sc.nextFloat();
         Float num6 = sc.nextFloat();
         findMax = new FindMax(num4, num5, num6);
-        System.out.println("Max Float value : " + findMax.testMaximum());
+        findMax.testMaximum();
 
         System.out.println("Enter the three strings : ");
         String str1 = sc.next();
         String str2 = sc.next();
         String str3 = sc.next();
         findMax = new FindMax(str1, str2, str3);
-        System.out.println("Max String value : " + findMax.testMaximum());
+        findMax.testMaximum();
     }
 }
