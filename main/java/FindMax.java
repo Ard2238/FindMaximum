@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class FindMax <E extends Comparable> {
@@ -14,12 +17,14 @@ public class FindMax <E extends Comparable> {
         return testMaximum(e1, e2, e3);
     }
 
-    public static <E extends  Comparable> E testMaximum(E e1, E e2, E e3){
-        if(e1.compareTo(e2) > 0  && e1.compareTo(e3) > 0)
-            return e1;
-        else if(e2.compareTo(e3) > 0)
-            return e2;
-        else return e3;
+    public static <E extends  Comparable> E testMaximum(E...e1){
+        if(e1 == null) {
+            System.out.println("There are no elements.");
+            return null;
+        }else {
+            Collections.sort(Arrays.asList(e1));
+            return e1[e1.length -1];
+        }
     }
 
     public static void main(String[] args) {
